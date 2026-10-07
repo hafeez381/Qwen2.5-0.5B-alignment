@@ -24,10 +24,11 @@ remote_py() {  # remote_py TIMEOUT <<'PY' ... PY
   $RETRY "$1" 3 colab exec -s "$SESSION" --timeout "$1" -f "$f"
 }
 
-remote_sh() {  # remote_sh TIMEOUT 'shell command'
+remote_sh() {  # remote_sh TIMEOUT 'shell command'   (base64 so no quoting can break the Python wrapper)
+  local b64; b64="$(printf '%s' "$2" | base64 | tr -d '\n')"
   remote_py "$1" <<PY
-import subprocess
-r = subprocess.run(r'''$2''', shell=True, capture_output=True, text=True)
+import base64, subprocess
+r = subprocess.run(base64.b64decode("$b64").decode(), shell=True, capture_output=True, text=True)
 print(r.stdout[-6000:], r.stderr[-3000:]); print("exit", r.returncode)
 PY
 }
@@ -70,7 +71,7 @@ launch)
 import shlex, subprocess
 cmd = """$*"""
 print("launching:", cmd)
-subprocess.Popen(f"cd $REMOTE && TOKENIZERS_PARALLELISM=false nohup {cmd} > outputs/logs/$name.log 2>&1; echo EXIT=\$? >> outputs/logs/$name.log",
+subprocess.Popen(f"cd $REMOTE && TOKENIZERS_PARALLELISM=false nohup bash -c {shlex.quote(cmd)} > outputs/logs/$name.log 2>&1; echo EXIT=\$? >> outputs/logs/$name.log",
                  shell=True, start_new_session=True)
 PY
   ;;

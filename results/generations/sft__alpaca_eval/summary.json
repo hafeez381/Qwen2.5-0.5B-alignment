@@ -1,0 +1,37 @@
+{
+  "git_sha": "bb101c74160d839da8c7ee5a374531a103f261e5",
+  "git_dirty": false,
+  "mode": "full",
+  "seed": 42,
+  "command": "python -m alignment.generate --mode full --model outputs/hub/sft/best --eval-set eval_sets/alpaca_eval_300_seed42.json --generator sft --dataset alpaca_eval",
+  "started_at": "2026-10-07T17:57:16+00:00",
+  "config": {
+    "seed": 42,
+    "max_new_tokens": 512,
+    "repetition_penalty": 1.1,
+    "batch_size": 16,
+    "model": "outputs/hub/sft/best",
+    "eval_set": "eval_sets/alpaca_eval_300_seed42.json",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 512,
+      "repetition_penalty": 1.1,
+      "eos_token_id": [
+        151643,
+        151645
+      ],
+      "pad_token_id": 151643
+    }
+  },
+  "wall_clock_s": 314.96,
+  "peak_vram_gb": 1.185,
+  "rows": "results/generations/sft__alpaca_eval/generations.jsonl",
+  "n_rows": 300,
+  "generation_config_hash": "15f006663fecfc51",
+  "summary": {
+    "n": 300,
+    "mean_new_tokens": 199.06333333333333,
+    "stop_rate": 0.95,
+    "empty_rate": 0.0
+  }
+}

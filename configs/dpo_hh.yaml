@@ -9,7 +9,7 @@ beta: 0.1
 grad_clip: 1.0
 epochs: 1
 eval_every: 50
-eval_batch: 8
+eval_batch: 2
 snapshot_every: 117
 early_gate_step: 150
 early_gate_min_accuracy: 0.55

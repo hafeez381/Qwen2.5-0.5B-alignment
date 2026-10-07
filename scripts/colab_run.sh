@@ -71,7 +71,7 @@ launch)
 import shlex, subprocess
 cmd = """$*"""
 print("launching:", cmd)
-subprocess.Popen(f"cd $REMOTE && TOKENIZERS_PARALLELISM=false nohup bash -c {shlex.quote(cmd)} > outputs/logs/$name.log 2>&1; echo EXIT=\$? >> outputs/logs/$name.log",
+subprocess.Popen(f"cd $REMOTE && TOKENIZERS_PARALLELISM=false PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True nohup bash -c {shlex.quote(cmd)} > outputs/logs/$name.log 2>&1; echo EXIT=\$? >> outputs/logs/$name.log",
                  shell=True, start_new_session=True)
 PY
   ;;

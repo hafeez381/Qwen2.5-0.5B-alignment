@@ -18,4 +18,4 @@ def add_mode_arg(parser) -> None:
 def resolve_model(model_id: str, mode: str) -> str:
     if mode not in ("smoke", "full"):
         raise ValueError(mode)
-    return SMOKE_MODELS[model_id] if mode == "smoke" else model_id
+    return SMOKE_MODELS.get(model_id, model_id) if mode == "smoke" else model_id

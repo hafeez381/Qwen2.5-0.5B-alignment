@@ -5,13 +5,9 @@ from __future__ import annotations
 import argparse
 import json
 import math
-import random
-import shutil
 import sys
 import time
-from pathlib import Path
 
-import numpy as np
 import torch
 import yaml
 from torch.utils.data import DataLoader
@@ -23,6 +19,7 @@ from alignment.io import read_jsonl, repo_path, sha256_file
 from alignment.logprobs import response_logprobs
 from alignment.results import finalize, reconcile, start_run
 from alignment.runmode import add_mode_arg, resolve_model
+from alignment.train_utils import load_snapshot, save_model, save_snapshot, set_seed
 
 SMOKE = {"train": "results/_smoke/data/prepared/sft_train.jsonl", "val": "results/_smoke/data/prepared/sft_val.jsonl",
          "output": "outputs/_smoke/sft", "results": "results/_smoke/sft", "grad_accum": 2, "eval_every": 1,
@@ -35,13 +32,6 @@ def load_config(path: str, mode: str) -> dict:
     if mode == "smoke":
         cfg.update(SMOKE)
     return cfg
-
-
-def set_seed(seed: int) -> None:
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)
 
 
 def window_backward(model, batches, scaler, autocast) -> tuple[float, int]:
@@ -71,30 +61,6 @@ def evaluate(model, tok, rows, cfg, autocast) -> tuple[float, int]:
         n += int(cnt.sum())
     model.train()
     return nll / max(n, 1), n
-
-
-def save_model(model, tok, path: Path) -> None:
-    tmp = path.with_name(path.name + "_tmp")
-    shutil.rmtree(tmp, ignore_errors=True)
-    model.save_pretrained(tmp, safe_serialization=True)
-    tok.save_pretrained(tmp)
-    shutil.rmtree(path, ignore_errors=True)
-    tmp.rename(path)
-
-
-def save_snapshot(model, tok, opt, scaler, sched, state, path: Path) -> None:
-    tmp = path.with_name(path.name + "_tmp")
-    shutil.rmtree(tmp, ignore_errors=True)
-    model.save_pretrained(tmp, safe_serialization=True)
-    tok.save_pretrained(tmp)
-    torch.save({"optimizer": opt.state_dict(), "scaler": scaler.state_dict(), "scheduler": sched.state_dict(),
-                "torch_rng": torch.get_rng_state(),
-                "cuda_rng": torch.cuda.get_rng_state_all() if torch.cuda.is_available() else None}, tmp / "trainer.pt")
-    (tmp / "state.json").write_text(json.dumps(state))
-    shutil.rmtree(path, ignore_errors=True)
-    tmp.rename(path)
-    for f in ("model.safetensors", "trainer.pt"):
-        print(f"SNAPSHOT step={state['step']} {f} sha256={sha256_file(path / f)}", flush=True)
 
 
 def summarize(rows: list[dict]) -> dict:
@@ -145,14 +111,7 @@ def train(config: str, mode: str, resume: bool) -> int:
     run = start_run(cfg["results"], mode=mode, cfg=cfg, seed=cfg["seed"], resume=resume)
     log = run["outdir"] / "metrics.jsonl"
     if resume:
-        ckpt = torch.load(snap / "trainer.pt", weights_only=False)
-        opt.load_state_dict(ckpt["optimizer"])
-        scaler.load_state_dict(ckpt["scaler"])
-        sched.load_state_dict(ckpt["scheduler"])
-        torch.set_rng_state(ckpt["torch_rng"])
-        if cuda and ckpt["cuda_rng"] is not None:
-            torch.cuda.set_rng_state_all(ckpt["cuda_rng"])
-        state = json.loads((snap / "state.json").read_text())
+        state = load_snapshot({"optimizer": opt, "scaler": scaler, "scheduler": sched}, snap)
         kept = [r for r in read_jsonl(log) if r["step"] <= state["step"]]
         log.write_text("".join(json.dumps(r) + "\n" for r in kept))
     else:
@@ -201,7 +160,7 @@ def train(config: str, mode: str, resume: bool) -> int:
         if state["step"] % cfg["eval_every"] == 0 or state["step"] == n_steps:
             validate()
         if state["step"] % cfg["snapshot_every"] == 0 and state["step"] < n_steps:
-            save_snapshot(model, tok, opt, scaler, sched, state, snap)
+            save_snapshot(model, tok, {"optimizer": opt, "scaler": scaler, "scheduler": sched}, state, snap)
 
     save_model(model, tok, out / "final")
     rows = read_jsonl(log)

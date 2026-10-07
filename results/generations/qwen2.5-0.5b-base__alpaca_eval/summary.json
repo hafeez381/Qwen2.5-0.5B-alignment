@@ -1,0 +1,37 @@
+{
+  "git_sha": "2f1b9cf046055962e7e528c170404e0ad2c488cd",
+  "git_dirty": false,
+  "mode": "full",
+  "seed": 42,
+  "command": "python -m alignment.generate --mode full --model Qwen/Qwen2.5-0.5B --eval-set eval_sets/alpaca_eval_300_seed42.json --generator qwen2.5-0.5b-base --dataset alpaca_eval",
+  "started_at": "2026-10-07T17:09:59+00:00",
+  "config": {
+    "seed": 42,
+    "max_new_tokens": 512,
+    "repetition_penalty": 1.0,
+    "batch_size": 16,
+    "model": "Qwen/Qwen2.5-0.5B",
+    "eval_set": "eval_sets/alpaca_eval_300_seed42.json",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 512,
+      "repetition_penalty": 1.0,
+      "eos_token_id": [
+        151643,
+        151645
+      ],
+      "pad_token_id": 151643
+    }
+  },
+  "wall_clock_s": 358.05,
+  "peak_vram_gb": 1.185,
+  "rows": "results/generations/qwen2.5-0.5b-base__alpaca_eval/generations.jsonl",
+  "n_rows": 300,
+  "generation_config_hash": "c34993a73529c6a2",
+  "summary": {
+    "n": 300,
+    "mean_new_tokens": 392.88666666666666,
+    "stop_rate": 0.3433333333333333,
+    "empty_rate": 0.0
+  }
+}

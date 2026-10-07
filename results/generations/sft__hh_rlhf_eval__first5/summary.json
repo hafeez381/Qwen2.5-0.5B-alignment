@@ -1,0 +1,37 @@
+{
+  "git_sha": "2f1b9cf046055962e7e528c170404e0ad2c488cd",
+  "git_dirty": false,
+  "mode": "full",
+  "seed": 42,
+  "command": "python -m alignment.generate --mode full --model outputs/sft/best --eval-set eval_sets/hh_rlhf_eval_300_seed42.json --generator sft --dataset hh_rlhf_eval --limit 5",
+  "started_at": "2026-10-07T17:23:08+00:00",
+  "config": {
+    "seed": 42,
+    "max_new_tokens": 512,
+    "repetition_penalty": 1.0,
+    "batch_size": 16,
+    "model": "outputs/sft/best",
+    "eval_set": "eval_sets/hh_rlhf_eval_300_seed42.json",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 512,
+      "repetition_penalty": 1.0,
+      "eos_token_id": [
+        151643,
+        151645
+      ],
+      "pad_token_id": 151643
+    }
+  },
+  "wall_clock_s": 12.46,
+  "peak_vram_gb": 0.968,
+  "rows": "results/generations/sft__hh_rlhf_eval__first5/generations.jsonl",
+  "n_rows": 5,
+  "generation_config_hash": "c34993a73529c6a2",
+  "summary": {
+    "n": 5,
+    "mean_new_tokens": 169.0,
+    "stop_rate": 1.0,
+    "empty_rate": 0.0
+  }
+}

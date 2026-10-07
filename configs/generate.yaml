@@ -1,4 +1,4 @@
 seed: 42
 max_new_tokens: 512
-repetition_penalty: 1.0
+repetition_penalty: 1.1
 batch_size: 16

@@ -36,3 +36,10 @@ def assert_no_eval_overlap(train_prompts, eval_prompts) -> None:
     hits = sorted({p for p in map(normalize_prompt, train_prompts) if p in evals})
     if hits:
         raise GuardError(f"{len(hits)} training prompt(s) equal an eval prompt, e.g. {hits[0][:80]!r}")
+
+
+def assert_same_init(model_dir, expected_sha256: str) -> None:
+    """The DPO policy and reference must both start from exactly the recorded SFT checkpoint."""
+    got = sha256_file(Path(model_dir) / "model.safetensors")
+    if got != expected_sha256:
+        raise GuardError(f"{model_dir} sha256 {got} != recorded SFT checkpoint {expected_sha256}")

@@ -1,0 +1,37 @@
+{
+  "git_sha": "c6d6d3c1d728a1dc6a379d119d987cf4127a7f46",
+  "git_dirty": false,
+  "mode": "full",
+  "seed": 42,
+  "command": "python -m alignment.generate --mode full --model outputs/dpo_hh/best --tokenizer Qwen/Qwen2.5-0.5B --eval-set eval_sets/hh_rlhf_eval_300_seed42.json --generator dpo-hh --dataset hh_rlhf_eval",
+  "started_at": "2026-10-07T19:16:41+00:00",
+  "config": {
+    "seed": 42,
+    "max_new_tokens": 512,
+    "repetition_penalty": 1.1,
+    "batch_size": 16,
+    "model": "outputs/dpo_hh/best",
+    "eval_set": "eval_sets/hh_rlhf_eval_300_seed42.json",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 512,
+      "repetition_penalty": 1.1,
+      "eos_token_id": [
+        151643,
+        151645
+      ],
+      "pad_token_id": 151643
+    }
+  },
+  "wall_clock_s": 226.16,
+  "peak_vram_gb": 1.079,
+  "rows": "results/generations/dpo-hh__hh_rlhf_eval/generations.jsonl",
+  "n_rows": 300,
+  "generation_config_hash": "15f006663fecfc51",
+  "summary": {
+    "n": 300,
+    "mean_new_tokens": 148.99,
+    "stop_rate": 0.9866666666666667,
+    "empty_rate": 0.0
+  }
+}

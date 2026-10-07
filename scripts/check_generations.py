@@ -10,13 +10,13 @@ NO_STOP_MAX = 0.10
 LOOP_MAX = 0.10
 
 
-def has_loop(text: str, n: int = 4, repeats: int = 3) -> bool:
-    """True if some n-gram of words occurs `repeats` times back to back."""
+def has_loop(text: str, max_period: int = 50, repeats: int = 3) -> bool:
+    """True if some span of 1..max_period words occurs `repeats` times back to back."""
     w = text.split()
-    for i in range(len(w) - n * repeats + 1):
-        gram = w[i : i + n]
-        if all(w[i + k * n : i + (k + 1) * n] == gram for k in range(1, repeats)):
-            return True
+    for p in range(1, max_period + 1):
+        for i in range(len(w) - p * repeats + 1):
+            if all(w[i + k * p : i + (k + 1) * p] == w[i : i + p] for k in range(1, repeats)):
+                return True
     return False
 
 

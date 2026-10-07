@@ -1,0 +1,12 @@
+{
+  "data/persona_lora/ramsay_style_preferences.json": "2902e7b6fc66648563814911f7a9ec02a755e203d78e747d8bbf2103b4e1a5c3",
+  "data/splits/hh_train.jsonl": "0267bf1e5a0baa412bda60b84b6662cd6bb7697c237a0972ba3f18365b4d5c73",
+  "data/splits/hh_val.jsonl": "d6e73cf06e7d6a42000be76550efd16a1ce2b07821aec6f9c7843a073a8d6be1",
+  "data/splits/sft_train.jsonl": "6567e143ad30fa37cfe0567536f99d37685c9f58170d88910028d5a4e101e017",
+  "data/splits/sft_val.jsonl": "d98fb47dad4587de43065c183087283a75073f6d18d8e165b92a9659d0e0344c",
+  "data/splits/uf_train.jsonl": "bc869d9dc1ea1d3ff990eb3157efc75dcca2c0de0197a69cc6a0a83a07d2bdb0",
+  "data/splits/uf_val.jsonl": "4c6312fa6c9917c11fdaaa5d1260a1e5f87922ac52cad4779b92ba1c91ecd3ac",
+  "eval_sets/alpaca_eval_300_seed42.json": "21026000a3c686d8b42d977db4a315c24c77aa0a963ef716ec26c52871356630",
+  "eval_sets/hh_rlhf_eval_300_seed42.json": "0731105407d06152e584c722717712be4f418f221a8d5c487bb924c4d91c38c6",
+  "eval_sets/persona_style_eval.json": "5f179f006e1952f3cfed4c0048dc472964bbed38457bd0e99a4337c461128c5a"
+}

@@ -1,4 +1,8 @@
-"""`--mode smoke|full`: smoke swaps each model for a tiny one with the same tokenizer, so every path runs on a laptop CPU."""
+"""`--mode smoke|full`: smoke swaps model weights for tiny ones so every path runs on a laptop CPU.
+
+The tokenizer is always loaded from the full model id: the tiny Qwen2 test model ships the Instruct
+tokenizer, whose EOS token and default system prompt differ from the base model's.
+"""
 from __future__ import annotations
 
 SMOKE_MODELS = {

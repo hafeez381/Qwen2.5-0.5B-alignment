@@ -20,7 +20,7 @@ probe.write("print('alive')\n")
 probe.close()
 misses = 0
 while not os.path.exists("outputs/keepalive.stop"):
-    p = subprocess.Popen(["colab", "exec", "-s", session, "--timeout", "30", "-f", probe.name], stdout=subprocess.PIPE,
+    p = subprocess.Popen(["colab", "exec", "-s", session, "--timeout", "30", "-f", probe.name], stdin=subprocess.DEVNULL, stdout=subprocess.PIPE,
                          stderr=subprocess.STDOUT, text=True, start_new_session=True)
     try:
         out, _ = p.communicate(timeout=60)

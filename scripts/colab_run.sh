@@ -67,9 +67,10 @@ setup)
 
 launch)
   name="${1:?NAME required}"; shift
+  b64="$(printf '%s' "$*" | base64 | tr -d '\n')"
   remote_py 60 <<PY
-import shlex, subprocess
-cmd = """$*"""
+import base64, shlex, subprocess
+cmd = base64.b64decode("$b64").decode()
 print("launching:", cmd)
 subprocess.Popen(f"cd $REMOTE && TOKENIZERS_PARALLELISM=false PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True nohup bash -c {shlex.quote(cmd)} > outputs/logs/$name.log 2>&1; echo EXIT=\$? >> outputs/logs/$name.log",
                  shell=True, start_new_session=True)

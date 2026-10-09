@@ -1,0 +1,36 @@
+{
+  "git_sha": "acb11c2d6c6e645a2022079808f1dcb69c424fc8",
+  "git_dirty": false,
+  "mode": "full",
+  "seed": 42,
+  "command": "python -m alignment.generate --mode full --model HuggingFaceTB/SmolLM2-360M-Instruct --eval-set eval_sets/persona_style_eval.json --generator smollm2-360m-instruct --dataset persona_style",
+  "started_at": "2026-10-09T08:40:39+00:00",
+  "config": {
+    "seed": 42,
+    "max_new_tokens": 512,
+    "repetition_penalty": 1.1,
+    "batch_size": 16,
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "eval_set": "eval_sets/persona_style_eval.json",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 512,
+      "repetition_penalty": 1.1,
+      "eos_token_id": [
+        2
+      ],
+      "pad_token_id": 2
+    }
+  },
+  "wall_clock_s": 65.82,
+  "peak_vram_gb": 1.071,
+  "rows": "results/generations/smollm2-360m-instruct__persona_style/generations.jsonl",
+  "n_rows": 40,
+  "generation_config_hash": "398b7746897b360b",
+  "summary": {
+    "n": 40,
+    "mean_new_tokens": 260.45,
+    "stop_rate": 0.975,
+    "empty_rate": 0.0
+  }
+}

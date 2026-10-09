@@ -1,0 +1,37 @@
+{
+  "git_sha": "acb11c2d6c6e645a2022079808f1dcb69c424fc8",
+  "git_dirty": false,
+  "mode": "full",
+  "seed": 42,
+  "command": "python -m alignment.generate --mode full --model outputs/dpo_uf/best --tokenizer Qwen/Qwen2.5-0.5B --eval-set eval_sets/alpaca_eval_300_seed42.json --generator dpo-uf --dataset alpaca_eval",
+  "started_at": "2026-10-09T08:33:04+00:00",
+  "config": {
+    "seed": 42,
+    "max_new_tokens": 512,
+    "repetition_penalty": 1.1,
+    "batch_size": 16,
+    "model": "outputs/dpo_uf/best",
+    "eval_set": "eval_sets/alpaca_eval_300_seed42.json",
+    "generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 512,
+      "repetition_penalty": 1.1,
+      "eos_token_id": [
+        151643,
+        151645
+      ],
+      "pad_token_id": 151643
+    }
+  },
+  "wall_clock_s": 346.37,
+  "peak_vram_gb": 1.166,
+  "rows": "results/generations/dpo-uf__alpaca_eval/generations.jsonl",
+  "n_rows": 300,
+  "generation_config_hash": "15f006663fecfc51",
+  "summary": {
+    "n": 300,
+    "mean_new_tokens": 289.3433333333333,
+    "stop_rate": 0.8766666666666667,
+    "empty_rate": 0.0
+  }
+}

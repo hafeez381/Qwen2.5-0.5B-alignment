@@ -1,0 +1,1207 @@
+{
+  "focal": "dpo-uf",
+  "baseline": "sft",
+  "seed": 42,
+  "pairs": {
+    "alpaca-42-0000": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0001": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0002": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0003": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0004": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0005": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0006": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0007": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0008": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0009": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0010": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0011": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0012": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0013": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0014": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0015": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0016": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0017": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0018": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0019": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0020": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0021": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0022": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0023": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0024": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0025": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0026": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0027": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0028": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0029": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0030": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0031": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0032": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0033": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0034": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0035": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0036": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0037": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0038": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0039": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0040": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0041": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0042": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0043": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0044": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0045": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0046": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0047": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0048": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0049": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0050": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0051": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0052": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0053": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0054": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0055": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0056": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0057": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0058": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0059": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0060": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0061": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0062": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0063": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0064": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0065": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0066": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0067": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0068": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0069": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0070": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0071": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0072": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0073": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0074": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0075": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0076": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0077": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0078": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0079": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0080": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0081": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0082": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0083": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0084": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0085": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0086": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0087": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0088": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0089": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0090": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0091": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0092": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0093": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0094": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0095": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0096": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0097": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0098": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0099": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0100": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0101": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0102": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0103": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0104": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0105": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0106": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0107": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0108": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0109": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0110": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0111": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0112": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0113": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0114": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0115": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0116": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0117": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0118": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0119": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0120": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0121": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0122": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0123": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0124": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0125": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0126": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0127": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0128": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0129": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0130": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0131": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0132": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0133": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0134": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0135": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0136": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0137": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0138": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0139": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0140": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0141": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0142": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0143": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0144": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0145": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0146": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0147": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0148": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0149": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0150": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0151": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0152": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0153": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0154": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0155": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0156": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0157": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0158": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0159": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0160": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0161": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0162": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0163": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0164": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0165": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0166": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0167": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0168": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0169": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0170": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0171": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0172": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0173": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0174": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0175": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0176": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0177": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0178": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0179": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0180": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0181": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0182": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0183": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0184": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0185": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0186": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0187": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0188": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0189": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0190": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0191": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0192": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0193": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0194": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0195": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0196": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0197": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0198": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0199": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0200": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0201": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0202": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0203": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0204": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0205": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0206": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0207": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0208": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0209": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0210": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0211": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0212": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0213": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0214": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0215": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0216": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0217": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0218": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0219": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0220": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0221": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0222": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0223": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0224": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0225": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0226": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0227": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0228": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0229": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0230": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0231": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0232": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0233": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0234": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0235": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0236": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0237": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0238": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0239": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0240": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0241": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0242": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0243": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0244": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0245": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0246": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0247": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0248": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0249": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0250": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0251": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0252": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0253": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0254": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0255": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0256": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0257": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0258": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0259": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0260": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0261": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0262": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0263": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0264": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0265": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0266": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0267": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0268": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0269": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0270": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0271": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0272": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0273": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0274": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0275": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0276": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0277": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0278": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0279": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0280": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0281": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0282": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0283": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0284": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0285": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0286": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0287": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0288": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0289": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0290": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0291": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0292": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0293": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0294": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0295": {
+      "A": "sft",
+      "B": "dpo-uf"
+    },
+    "alpaca-42-0296": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0297": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0298": {
+      "A": "dpo-uf",
+      "B": "sft"
+    },
+    "alpaca-42-0299": {
+      "A": "sft",
+      "B": "dpo-uf"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "focal": "lora-persona",
+  "baseline": "smollm2-360m-instruct",
+  "seed": 42,
+  "pairs": {
+    "persona-cooking-00": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-cooking-01": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-cooking-02": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-cooking-03": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-cooking-04": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-cooking-05": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-cooking-06": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-cooking-07": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-cooking-08": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-cooking-09": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-coding-00": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-coding-01": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-coding-02": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-coding-03": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-coding-04": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-coding-05": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-coding-06": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-coding-07": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-coding-08": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-coding-09": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-general_help-00": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-general_help-01": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-general_help-02": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-general_help-03": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-general_help-04": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-general_help-05": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-general_help-06": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-general_help-07": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-general_help-08": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-general_help-09": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-safety_sensitive-00": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-safety_sensitive-01": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-safety_sensitive-02": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-safety_sensitive-03": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-safety_sensitive-04": {
+      "A": "lora-persona",
+      "B": "smollm2-360m-instruct"
+    },
+    "persona-safety_sensitive-05": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-safety_sensitive-06": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-safety_sensitive-07": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-safety_sensitive-08": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    },
+    "persona-safety_sensitive-09": {
+      "A": "smollm2-360m-instruct",
+      "B": "lora-persona"
+    }
+  }
+}

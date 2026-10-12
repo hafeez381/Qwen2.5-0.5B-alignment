@@ -1,0 +1,213 @@
+{
+  "focal": "dpo-hh",
+  "baseline": "sft",
+  "rubric": "safety",
+  "judge_models": [
+    "google/gemini-3.6-flash"
+  ],
+  "rows": "results/eval/hh_dpo_vs_sft/outcomes_safety.jsonl",
+  "summary": {
+    "n": 300,
+    "win": 167,
+    "tie": 29,
+    "loss": 104,
+    "unknown": 0,
+    "failure": 0,
+    "win_rate_with_ties": 0.605,
+    "win_rate_without_ties": 0.6162361623616236,
+    "ci95_with_ties": [
+      0.5487,
+      0.6587
+    ],
+    "ci95_without_ties": [
+      0.5571,
+      0.6721
+    ],
+    "a_position_rate": 0.6752767527675276,
+    "a_position_rate_swapped": 0.5617977528089888,
+    "swap_pairs": 300,
+    "swap_consistency": 0.7033333333333334,
+    "by_category": {
+      "benign_helpfulness": {
+        "n": 30,
+        "win": 16,
+        "tie": 2,
+        "loss": 12,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.5666666666666667,
+        "win_rate_without_ties": 0.5714285714285714,
+        "ci95_with_ties": [
+          0.392,
+          0.7262
+        ],
+        "ci95_without_ties": [
+          0.3907,
+          0.7349
+        ]
+      },
+      "calibration_and_uncertainty": {
+        "n": 30,
+        "win": 10,
+        "tie": 7,
+        "loss": 13,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.45,
+        "win_rate_without_ties": 0.43478260869565216,
+        "ci95_with_ties": [
+          0.288,
+          0.6234
+        ],
+        "ci95_without_ties": [
+          0.2563,
+          0.6319
+        ]
+      },
+      "cyber_abuse": {
+        "n": 30,
+        "win": 21,
+        "tie": 2,
+        "loss": 7,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.7333333333333333,
+        "win_rate_without_ties": 0.75,
+        "ci95_with_ties": [
+          0.5555,
+          0.8582
+        ],
+        "ci95_without_ties": [
+          0.5664,
+          0.8732
+        ]
+      },
+      "harmful_instructions": {
+        "n": 30,
+        "win": 18,
+        "tie": 3,
+        "loss": 9,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.65,
+        "win_rate_without_ties": 0.6666666666666666,
+        "ci95_with_ties": [
+          0.4714,
+          0.7946
+        ],
+        "ci95_without_ties": [
+          0.4782,
+          0.8136
+        ]
+      },
+      "hate_or_harassment": {
+        "n": 30,
+        "win": 19,
+        "tie": 3,
+        "loss": 8,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.6833333333333333,
+        "win_rate_without_ties": 0.7037037037037037,
+        "ci95_with_ties": [
+          0.5044,
+          0.8206
+        ],
+        "ci95_without_ties": [
+          0.5152,
+          0.8415
+        ]
+      },
+      "legal_financial_safety": {
+        "n": 30,
+        "win": 15,
+        "tie": 3,
+        "loss": 12,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.55,
+        "win_rate_without_ties": 0.5555555555555556,
+        "ci95_with_ties": [
+          0.3766,
+          0.712
+        ],
+        "ci95_without_ties": [
+          0.3731,
+          0.7241
+        ]
+      },
+      "medical_safety": {
+        "n": 30,
+        "win": 20,
+        "tie": 3,
+        "loss": 7,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.7166666666666667,
+        "win_rate_without_ties": 0.7407407407407407,
+        "ci95_with_ties": [
+          0.5383,
+          0.8459
+        ],
+        "ci95_without_ties": [
+          0.5532,
+          0.8683
+        ]
+      },
+      "privacy_and_doxxing": {
+        "n": 30,
+        "win": 21,
+        "tie": 2,
+        "loss": 7,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.7333333333333333,
+        "win_rate_without_ties": 0.75,
+        "ci95_with_ties": [
+          0.5555,
+          0.8582
+        ],
+        "ci95_without_ties": [
+          0.5664,
+          0.8732
+        ]
+      },
+      "safe_transformation": {
+        "n": 30,
+        "win": 14,
+        "tie": 1,
+        "loss": 15,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.48333333333333334,
+        "win_rate_without_ties": 0.4827586206896552,
+        "ci95_with_ties": [
+          0.3168,
+          0.6536
+        ],
+        "ci95_without_ties": [
+          0.3139,
+          0.6557
+        ]
+      },
+      "self_harm_support": {
+        "n": 30,
+        "win": 13,
+        "tie": 3,
+        "loss": 14,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.48333333333333334,
+        "win_rate_without_ties": 0.48148148148148145,
+        "ci95_with_ties": [
+          0.3168,
+          0.6536
+        ],
+        "ci95_without_ties": [
+          0.3074,
+          0.6601
+        ]
+      }
+    }
+  }
+}

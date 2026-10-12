@@ -1,0 +1,102 @@
+{
+  "focal": "lora-persona",
+  "baseline": "smollm2-360m-instruct",
+  "rubric": "style",
+  "judge_models": [
+    "google/gemini-3.6-flash"
+  ],
+  "rows": "results/eval/lora_vs_base/outcomes_style.jsonl",
+  "summary": {
+    "n": 40,
+    "win": 16,
+    "tie": 24,
+    "loss": 0,
+    "unknown": 0,
+    "failure": 0,
+    "win_rate_with_ties": 0.7,
+    "win_rate_without_ties": 1.0,
+    "ci95_with_ties": [
+      0.5457,
+      0.8193
+    ],
+    "ci95_without_ties": [
+      0.8064,
+      1.0
+    ],
+    "a_position_rate": 0.4375,
+    "a_position_rate_swapped": 0.5384615384615384,
+    "swap_pairs": 40,
+    "swap_consistency": 0.875,
+    "by_category": {
+      "coding": {
+        "n": 10,
+        "win": 5,
+        "tie": 5,
+        "loss": 0,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.75,
+        "win_rate_without_ties": 1.0,
+        "ci95_with_ties": [
+          0.4422,
+          0.9191
+        ],
+        "ci95_without_ties": [
+          0.5655,
+          1.0
+        ]
+      },
+      "cooking": {
+        "n": 10,
+        "win": 7,
+        "tie": 3,
+        "loss": 0,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.85,
+        "win_rate_without_ties": 1.0,
+        "ci95_with_ties": [
+          0.5411,
+          0.9646
+        ],
+        "ci95_without_ties": [
+          0.6457,
+          1.0
+        ]
+      },
+      "general_help": {
+        "n": 10,
+        "win": 0,
+        "tie": 10,
+        "loss": 0,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.5,
+        "win_rate_without_ties": null,
+        "ci95_with_ties": [
+          0.2366,
+          0.7634
+        ],
+        "ci95_without_ties": null
+      },
+      "safety_sensitive": {
+        "n": 10,
+        "win": 4,
+        "tie": 6,
+        "loss": 0,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.7,
+        "win_rate_without_ties": 1.0,
+        "ci95_with_ties": [
+          0.3968,
+          0.8922
+        ],
+        "ci95_without_ties": [
+          0.5101,
+          1.0
+        ]
+      }
+    }
+  }
+}

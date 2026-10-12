@@ -1,0 +1,105 @@
+{
+  "focal": "lora-persona",
+  "baseline": "smollm2-360m-instruct",
+  "rubric": "usefulness",
+  "judge_models": [
+    "google/gemini-3.6-flash"
+  ],
+  "rows": "results/eval/lora_vs_base/outcomes_usefulness.jsonl",
+  "summary": {
+    "n": 40,
+    "win": 8,
+    "tie": 2,
+    "loss": 30,
+    "unknown": 0,
+    "failure": 0,
+    "win_rate_with_ties": 0.225,
+    "win_rate_without_ties": 0.21052631578947367,
+    "ci95_with_ties": [
+      0.1232,
+      0.375
+    ],
+    "ci95_without_ties": [
+      0.1107,
+      0.3635
+    ],
+    "a_position_rate": 0.5789473684210527,
+    "a_position_rate_swapped": 0.6486486486486487,
+    "swap_pairs": 40,
+    "swap_consistency": 0.625,
+    "by_category": {
+      "coding": {
+        "n": 10,
+        "win": 0,
+        "tie": 1,
+        "loss": 9,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.05,
+        "win_rate_without_ties": 0.0,
+        "ci95_with_ties": [
+          0.0052,
+          0.3445
+        ],
+        "ci95_without_ties": [
+          0.0,
+          0.2992
+        ]
+      },
+      "cooking": {
+        "n": 10,
+        "win": 4,
+        "tie": 0,
+        "loss": 6,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.4,
+        "win_rate_without_ties": 0.4,
+        "ci95_with_ties": [
+          0.1682,
+          0.6873
+        ],
+        "ci95_without_ties": [
+          0.1682,
+          0.6873
+        ]
+      },
+      "general_help": {
+        "n": 10,
+        "win": 1,
+        "tie": 1,
+        "loss": 8,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.15,
+        "win_rate_without_ties": 0.1111111111111111,
+        "ci95_with_ties": [
+          0.0354,
+          0.4589
+        ],
+        "ci95_without_ties": [
+          0.0199,
+          0.435
+        ]
+      },
+      "safety_sensitive": {
+        "n": 10,
+        "win": 3,
+        "tie": 0,
+        "loss": 7,
+        "unknown": 0,
+        "failure": 0,
+        "win_rate_with_ties": 0.3,
+        "win_rate_without_ties": 0.3,
+        "ci95_with_ties": [
+          0.1078,
+          0.6032
+        ],
+        "ci95_without_ties": [
+          0.1078,
+          0.6032
+        ]
+      }
+    }
+  }
+}

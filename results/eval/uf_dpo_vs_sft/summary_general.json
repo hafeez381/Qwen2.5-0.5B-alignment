@@ -1,0 +1,32 @@
+{
+  "focal": "dpo-uf",
+  "baseline": "sft",
+  "rubric": "general",
+  "judge_models": [
+    "google/gemini-3.6-flash"
+  ],
+  "rows": "results/eval/uf_dpo_vs_sft/outcomes_general.jsonl",
+  "summary": {
+    "n": 300,
+    "win": 132,
+    "tie": 23,
+    "loss": 143,
+    "unknown": 2,
+    "failure": 0,
+    "win_rate_with_ties": 0.4815436241610738,
+    "win_rate_without_ties": 0.48,
+    "ci95_with_ties": [
+      0.4254,
+      0.5381
+    ],
+    "ci95_without_ties": [
+      0.4216,
+      0.5389
+    ],
+    "a_position_rate": 0.6,
+    "a_position_rate_swapped": 0.5698924731182796,
+    "swap_pairs": 299,
+    "swap_consistency": 0.7658862876254181,
+    "by_category": {}
+  }
+}

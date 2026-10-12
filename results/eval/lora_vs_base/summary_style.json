@@ -13,6 +13,8 @@
     "loss": 0,
     "unknown": 0,
     "failure": 0,
+    "unknown_rate": 0.0,
+    "failure_rate": 0.0,
     "win_rate_with_ties": 0.7,
     "win_rate_without_ties": 1.0,
     "ci95_with_ties": [
@@ -25,6 +27,8 @@
     ],
     "a_position_rate": 0.4375,
     "a_position_rate_swapped": 0.5384615384615384,
+    "retried_pairs": 5,
+    "retried_pairs_swapped": 5,
     "swap_pairs": 40,
     "swap_consistency": 0.875,
     "by_category": {
@@ -35,6 +39,8 @@
         "loss": 0,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.75,
         "win_rate_without_ties": 1.0,
         "ci95_with_ties": [
@@ -53,6 +59,8 @@
         "loss": 0,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.85,
         "win_rate_without_ties": 1.0,
         "ci95_with_ties": [
@@ -71,6 +79,8 @@
         "loss": 0,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.5,
         "win_rate_without_ties": null,
         "ci95_with_ties": [
@@ -86,6 +96,8 @@
         "loss": 0,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.7,
         "win_rate_without_ties": 1.0,
         "ci95_with_ties": [

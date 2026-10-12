@@ -13,6 +13,8 @@
     "loss": 104,
     "unknown": 0,
     "failure": 0,
+    "unknown_rate": 0.0,
+    "failure_rate": 0.0,
     "win_rate_with_ties": 0.605,
     "win_rate_without_ties": 0.6162361623616236,
     "ci95_with_ties": [
@@ -25,6 +27,8 @@
     ],
     "a_position_rate": 0.6752767527675276,
     "a_position_rate_swapped": 0.5617977528089888,
+    "retried_pairs": 5,
+    "retried_pairs_swapped": 20,
     "swap_pairs": 300,
     "swap_consistency": 0.7033333333333334,
     "by_category": {
@@ -35,6 +39,8 @@
         "loss": 12,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.5666666666666667,
         "win_rate_without_ties": 0.5714285714285714,
         "ci95_with_ties": [
@@ -53,6 +59,8 @@
         "loss": 13,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.45,
         "win_rate_without_ties": 0.43478260869565216,
         "ci95_with_ties": [
@@ -71,6 +79,8 @@
         "loss": 7,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.7333333333333333,
         "win_rate_without_ties": 0.75,
         "ci95_with_ties": [
@@ -89,6 +99,8 @@
         "loss": 9,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.65,
         "win_rate_without_ties": 0.6666666666666666,
         "ci95_with_ties": [
@@ -107,6 +119,8 @@
         "loss": 8,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.6833333333333333,
         "win_rate_without_ties": 0.7037037037037037,
         "ci95_with_ties": [
@@ -125,6 +139,8 @@
         "loss": 12,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.55,
         "win_rate_without_ties": 0.5555555555555556,
         "ci95_with_ties": [
@@ -143,6 +159,8 @@
         "loss": 7,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.7166666666666667,
         "win_rate_without_ties": 0.7407407407407407,
         "ci95_with_ties": [
@@ -161,6 +179,8 @@
         "loss": 7,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.7333333333333333,
         "win_rate_without_ties": 0.75,
         "ci95_with_ties": [
@@ -179,6 +199,8 @@
         "loss": 15,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.48333333333333334,
         "win_rate_without_ties": 0.4827586206896552,
         "ci95_with_ties": [
@@ -197,6 +219,8 @@
         "loss": 14,
         "unknown": 0,
         "failure": 0,
+        "unknown_rate": 0.0,
+        "failure_rate": 0.0,
         "win_rate_with_ties": 0.48333333333333334,
         "win_rate_without_ties": 0.48148148148148145,
         "ci95_with_ties": [

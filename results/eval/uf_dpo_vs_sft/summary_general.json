@@ -13,6 +13,8 @@
     "loss": 143,
     "unknown": 2,
     "failure": 0,
+    "unknown_rate": 0.006666666666666667,
+    "failure_rate": 0.0,
     "win_rate_with_ties": 0.4815436241610738,
     "win_rate_without_ties": 0.48,
     "ci95_with_ties": [
@@ -25,6 +27,8 @@
     ],
     "a_position_rate": 0.6,
     "a_position_rate_swapped": 0.5698924731182796,
+    "retried_pairs": 45,
+    "retried_pairs_swapped": 65,
     "swap_pairs": 299,
     "swap_consistency": 0.7658862876254181,
     "by_category": {}

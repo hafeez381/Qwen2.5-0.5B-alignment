@@ -3,6 +3,9 @@
 Writes per-pair rows (verdict translated to the model that won) and a summary recomputed from those rows:
 win rate with ties counted as half and without ties, Wilson 95% intervals, per-category rates, the share of decided
 verdicts that went to position A, and, given the swapped pass, how often the same model wins in both orders.
+Prints PASS/BREACH for judge reliability (unknown + failure <= 5%, swap consistency >= 70%, A-position rate <= 65% in
+each pass) and, with --compare, for whether two rubrics on the same pairs agree on at most 90% of them; exits 1 on a
+breach after writing the files, so the numbers are kept and reported.
 """
 from __future__ import annotations
 
@@ -48,17 +51,38 @@ def summarize(rows: list[dict]) -> dict:
         by_cat[r["category"] or "all"].append(r)
     decided = [r for r in rows if r["verdict"] in ("A", "B")]
     swap = [r for r in rows if r.get("swap_outcome") in ("win", "loss", "tie")]
+    swap_decided = [r for r in rows if r.get("swap_verdict") in ("A", "B")]
     return {**rates(rows),
             "a_position_rate": sum(r["verdict"] == "A" for r in decided) / len(decided) if decided else None,
+            "a_position_rate_swapped": (sum(r["swap_verdict"] == "A" for r in swap_decided) / len(swap_decided)
+                                        if swap_decided else None),
             "swap_pairs": len(swap),
             "swap_consistency": sum(r["swap_outcome"] == r["outcome"] for r in swap) / len(swap) if swap else None,
             "by_category": {k: rates(v) for k, v in sorted(by_cat.items())} if len(by_cat) > 1 else {}}
+
+
+def gates(s: dict) -> list[tuple[bool, str]]:
+    bad = (s["unknown"] + s["failure"]) / s["n"]
+    out = [(bad <= 0.05, f"unknown + failure {bad:.3f} (max 0.05)")]
+    if s["swap_consistency"] is not None:
+        out.append((s["swap_consistency"] >= 0.70, f"swap consistency {s['swap_consistency']:.3f} (min 0.70)"))
+    for key in ("a_position_rate", "a_position_rate_swapped"):
+        if s[key] is not None:
+            out.append((s[key] <= 0.65, f"{key} {s[key]:.3f} (max 0.65)"))
+    return out
+
+
+def agreement(a: list[dict], b: list[dict]) -> float:
+    other = {r["pair_id"]: r["outcome"] for r in b}
+    shared = [r for r in a if r["pair_id"] in other]
+    return sum(r["outcome"] == other[r["pair_id"]] for r in shared) / len(shared)
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", required=True, help="results/eval/<name>")
     ap.add_argument("--rubric", required=True)
+    ap.add_argument("--compare", help="another rubric judged on the same pairs; gate: outcomes agree on <= 90%")
     args = ap.parse_args()
     d = f"results/eval/{args.name}"
     meta = read_json(f"{d}/mapping.json")
@@ -101,7 +125,13 @@ def main() -> int:
                                                     "judge_models": judge_models, "rows": f"{d}/outcomes_{args.rubric}.jsonl",
                                                     "summary": summary})
     print(json.dumps({k: v for k, v in summary.items() if k != "by_category"}))
-    return 0
+    checks = gates(summary)
+    if args.compare:
+        agree = agreement(rows, read_jsonl(f"{d}/outcomes_{args.compare}.jsonl"))
+        checks.append((agree <= 0.90, f"{args.rubric}/{args.compare} outcome agreement {agree:.3f} (max 0.90)"))
+    for ok, msg in checks:
+        print(("PASS: " if ok else "BREACH: ") + msg)
+    return 0 if all(ok for ok, _ in checks) else 1
 
 
 if __name__ == "__main__":

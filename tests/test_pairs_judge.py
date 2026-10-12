@@ -107,3 +107,15 @@ def test_summary_rates_and_swap_consistency():
     assert s["a_position_rate"] == pytest.approx(0.5) and s["swap_consistency"] == pytest.approx(2 / 3)
     assert sj.outcome("A", {"A": "dpo", "B": "sft"}, "dpo") == "win"
     assert sj.outcome("A", {"A": "sft", "B": "dpo"}, "dpo") == "loss"
+
+
+def test_gates_and_rubric_agreement():
+    rows = [{"pair_id": str(i), "category": None, "verdict": "A", "outcome": "win", "swap_verdict": "B",
+             "swap_outcome": "win"} for i in range(9)]
+    rows.append({"pair_id": "9", "category": None, "verdict": "failure", "outcome": "failure"})
+    s = sj.summarize(rows)
+    assert s["a_position_rate"] == 1.0 and s["a_position_rate_swapped"] == 0.0
+    verdicts = {msg.split()[0]: ok for ok, msg in sj.gates(s)}
+    assert verdicts == {"unknown": False, "swap": True, "a_position_rate": False, "a_position_rate_swapped": True}
+    other = [{"pair_id": str(i), "outcome": "win" if i < 5 else "loss"} for i in range(10)]
+    assert sj.agreement(rows, other) == pytest.approx(5 / 10)

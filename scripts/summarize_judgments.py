@@ -40,6 +40,7 @@ def rates(rows: list[dict]) -> dict:
     w, t, l = c["win"], c["tie"], c["loss"]
     decided = w + t + l
     return {"n": len(rows), "win": w, "tie": t, "loss": l, "unknown": c["unknown"], "failure": c["failure"],
+            "unknown_rate": c["unknown"] / len(rows), "failure_rate": c["failure"] / len(rows),
             "win_rate_with_ties": (w + 0.5 * t) / decided if decided else None,
             "win_rate_without_ties": w / (w + l) if w + l else None,
             "ci95_with_ties": wilson(w + 0.5 * t, decided), "ci95_without_ties": wilson(w, w + l)}
@@ -56,6 +57,8 @@ def summarize(rows: list[dict]) -> dict:
             "a_position_rate": sum(r["verdict"] == "A" for r in decided) / len(decided) if decided else None,
             "a_position_rate_swapped": (sum(r["swap_verdict"] == "A" for r in swap_decided) / len(swap_decided)
                                         if swap_decided else None),
+            "retried_pairs": sum((r.get("attempts") or 1) > 1 for r in rows),
+            "retried_pairs_swapped": sum((r.get("swap_attempts") or 1) > 1 for r in rows),
             "swap_pairs": len(swap),
             "swap_consistency": sum(r["swap_outcome"] == r["outcome"] for r in swap) / len(swap) if swap else None,
             "by_category": {k: rates(v) for k, v in sorted(by_cat.items())} if len(by_cat) > 1 else {}}
@@ -110,11 +113,13 @@ def main() -> int:
         j = main_j.get(pid)
         verdict = j["verdict"] if j else ("failure" if pid in main_f else "missing")
         row = {"pair_id": pid, "category": p["category"], "verdict": verdict,
-               "outcome": outcome(verdict, mapping[pid], focal) if verdict != "missing" else "failure"}
+               "outcome": outcome(verdict, mapping[pid], focal) if verdict != "missing" else "failure",
+               "attempts": j["attempts"] if j else None}
         if swap_j and pid in swap_j:
             flipped = {"A": mapping[pid]["B"], "B": mapping[pid]["A"]}
             row["swap_verdict"] = swap_j[pid]["verdict"]
             row["swap_outcome"] = outcome(swap_j[pid]["verdict"], flipped, focal)
+            row["swap_attempts"] = swap_j[pid]["attempts"]
         rows.append(row)
     write_jsonl(f"{d}/outcomes_{args.rubric}.jsonl", rows)
     summary = summarize(read_jsonl(f"{d}/outcomes_{args.rubric}.jsonl"))

@@ -112,8 +112,10 @@ def test_summary_rates_and_swap_consistency():
 def test_gates_and_rubric_agreement():
     rows = [{"pair_id": str(i), "category": None, "verdict": "A", "outcome": "win", "swap_verdict": "B",
              "swap_outcome": "win"} for i in range(9)]
-    rows.append({"pair_id": "9", "category": None, "verdict": "failure", "outcome": "failure"})
+    rows.append({"pair_id": "9", "category": None, "verdict": "failure", "outcome": "failure", "attempts": None})
+    rows[0]["attempts"], rows[1]["swap_attempts"] = 2, 3
     s = sj.summarize(rows)
+    assert (s["failure_rate"], s["unknown_rate"], s["retried_pairs"], s["retried_pairs_swapped"]) == (0.1, 0.0, 1, 1)
     assert s["a_position_rate"] == 1.0 and s["a_position_rate_swapped"] == 0.0
     verdicts = {msg.split()[0]: ok for ok, msg in sj.gates(s)}
     assert verdicts == {"unknown": False, "swap": True, "a_position_rate": False, "a_position_rate_swapped": True}

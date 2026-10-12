@@ -1,0 +1,30 @@
+\begin{tabular}{l l l l l}
+\toprule
+ & SFT & HH-DPO & UF-DPO & LoRA-DPO \\
+\midrule
+Trainable parameters & full & full & full & LoRA, 8.68M (2.34\%) \\
+LoRA rank, $\alpha$, dropout & -- & -- & -- & 16, 32, 0.05 \\
+LoRA target modules & -- & -- & -- & all linear layers \\
+Optimizer & AdamW & RMSprop & RMSprop & AdamW \\
+Peak learning rate & $2\times10^{-5}$ & $1\times10^{-6}$ & $1\times10^{-6}$ & $5\times10^{-5}$ \\
+Schedule, warmup & cosine, 3\% & constant, none & constant, none & cosine, 10\% \\
+Weight decay & 0.1 & 0 & 0 & 0 \\
+Gradient clipping & 1.0 & 1.0 & 1.0 & 1.0 \\
+Batch $\times$ accumulation & 2 $\times$ 16 & 1 $\times$ 32 & 1 $\times$ 32 & 4 $\times$ 2 \\
+Effective batch & 32 & 32 & 32 & 8 \\
+Precision & fp16 mixed & fp16 mixed & fp16 mixed & bf16 \\
+Max length (prompt) & 512 (256) & 512 (256) & 512 (256) & 512 (256) \\
+Epochs (optimizer steps) & 1 (938) & 1 (469) & 1 (469) & 3 (75) \\
+DPO $\beta$ & -- & 0.1 & 0.1 & 0.1 \\
+Reference model & -- & SFT step 938 & SFT step 938 & adapter disabled \\
+Seed & 42 & 42 & 42 & 42 \\
+\midrule
+\multicolumn{5}{l}{\textit{Evaluation decoding}} \\
+Decoding & greedy & greedy & greedy & greedy \\
+Temperature, top-$p$ & not used & not used & not used & not used \\
+Max new tokens & 512 & 512 & 512 & 512 \\
+Repetition penalty & 1.1 & 1.1 & 1.1 & 1.1 \\
+Length penalty & none & none & none & none \\
+Chat template & Qwen default & Qwen default & Qwen default & SmolLM2 default \\
+\bottomrule
+\end{tabular}

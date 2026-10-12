@@ -1,0 +1,12 @@
+\begin{tabular}{l r r r r r r}
+\toprule
+ & \multicolumn{2}{c}{Split size} & \multicolumn{3}{c}{Mean tokens} & \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-6}
+Track & Train & Val & Prompt & Chosen & Rejected & Cut at 512 \\
+\midrule
+SFT & 30,000 & 1,000 & 92 & 383 & -- & 36.5\% \\
+HH-DPO & 15,000 & 1,000 & 35 & 78 & 71 & 0.2 / 0.2\% \\
+UF-DPO & 15,000 & 1,000 & 89 & 295 & 248 & 27.9 / 19.4\% \\
+LoRA-DPO & 200 & 20 & -- & -- & -- & -- \\
+\bottomrule
+\end{tabular}

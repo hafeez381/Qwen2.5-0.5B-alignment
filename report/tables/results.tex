@@ -1,0 +1,14 @@
+\begin{tabular}{l c c c c}
+\toprule
+ & HH-DPO vs SFT & UF-DPO vs SFT & \multicolumn{2}{c}{LoRA-DPO vs SmolLM2} \\
+\cmidrule(lr){4-5}
+Rubric & safety & general & style & usefulness \\
+\midrule
+Pairs $n$ & 300 & 300 & 40 & 40 \\
+Wins / ties / losses & 167 / 29 / 104 & 132 / 23 / 143 & 16 / 24 / 0 & 8 / 2 / 30 \\
+Unknown / failures & 0 / 0 & 2 / 0 & 0 / 0 & 0 / 0 \\
+Pairs retried & 25 & 110 & 10 & 0 \\
+Win rate (ties as half) & 0.605 & 0.482 & 0.700 & 0.225 \\
+Win rate without ties & 0.616 & 0.480 & 1.000 & 0.211 \\
+\bottomrule
+\end{tabular}

@@ -17,3 +17,5 @@ report/*.out
 report/*.bbl
 report/*.blg
 report/*.synctex.gz
+report/*.fdb_latexmk
+report/*.fls

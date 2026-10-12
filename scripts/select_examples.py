@@ -38,6 +38,7 @@ def select(rows: list[dict], k: int, seed: int = 42) -> list[dict]:
                     break
             if len(picked) == k:
                 break
+        turn += 1
     return picked
 
 

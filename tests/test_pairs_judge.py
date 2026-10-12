@@ -121,3 +121,14 @@ def test_gates_and_rubric_agreement():
     assert verdicts == {"unknown": False, "swap": True, "a_position_rate": False, "a_position_rate_swapped": True}
     other = [{"pair_id": str(i), "outcome": "win" if i < 5 else "loss"} for i in range(10)]
     assert sj.agreement(rows, other) == pytest.approx(5 / 10)
+
+
+def test_select_examples_covers_categories_and_prefers_swap_stable():
+    se = load("select_examples")
+    rows = [{"pair_id": f"{c}{i}", "category": c, "outcome": o, "swap_outcome": o if i % 2 else "tie"}
+            for c in "xyz" for i, o in enumerate(["win", "win", "loss", "loss", "tie", "tie"])]
+    picked = se.select(rows, k=6)
+    assert len(picked) == 6 and {r["category"] for r in picked} == set("xyz")
+    assert {r["outcome"] for r in picked} == {"win", "loss", "tie"}
+    assert all(r["swap_outcome"] == r["outcome"] for r in picked)
+    assert se.select(rows, k=6) == picked
